@@ -1,0 +1,24 @@
+.bond-predict {
+    position: relative;
+    left: 114px;
+    overflow: hidden;
+}
+
+.bond-predict h2,
+h3 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.formula {
+    position: relative;
+    left: 30px;
+    margin-top: 20px
+}
+
+#netvalue {
+    position: relative;
+    height: 600px;
+    width: 800px;
+    left: 144px;
+}

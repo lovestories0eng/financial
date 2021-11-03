@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="form-style.css"> -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="JS/echarts.js"></script>
+    <title>债券数据分析系统</title>
+</head>
+
+<body>
+    <div id="fade" class="black_overlay"></div>
+    <table class="pure-table white-content" id="day">
+        <caption>
+            <a href="javascript:void(0)"><i class="fa fa-times"></i></a>
+        </caption>
+        <caption>
+            <h2>每日概况</h2>
+        </caption>
+        <thead>
+            <td>类型</td>
+            <td>成交笔数</td>
+            <td>成交金额(万元)</td>
+            <td>加权平均价格 </td>
+        </thead>
+        <tr>
+            <td>记账式国债</td>
+            <td>2278</td>
+            <td>172636.91</td>
+            <td>102.632 </td>
+        </tr>
+        <tr>
+            <td>地方政府债</td>
+            <td>1</td>
+            <td>3080.76</td>
+            <td>102.692 </td>
+        </tr>
+        <tr>
+            <td>金融债</td>
+            <td>193</td>
+            <td>4947.89</td>
+            <td>106.307 </td>
+        </tr>
+        <tr>
+            <td>企业债</td>
+            <td>341</td>
+            <td>295100.79</td>
+            <td>77.112 </td>
+        </tr>
+        <tr>
+            <td>中小企业私募债</td>
+            <td>871</td>
+            <td>2224091.3</td>
+            <td>99.181 </td>
+        </tr>
+        <tr>
+            <td>公开发行公司债</td>
+            <td>1540</td>
+            <td>1365742.24</td>
+            <td>96.784 </td>
+        </tr>
+        <tr>
+            <td>非公开发行公司债</td>
+            <td>7</td>
+            <td>13000</td>
+            <td>100 </td>
+        </tr>
+        <tr>
+            <td>可转债</td>
+            <td>2528169</td>
+            <td>2329881.36</td>
+            <td>138.179 </td>
+        </tr>
+        <tr>
+            <td>可交换债</td>
+            <td>2261</td>
+            <td>37183.3</td>
+            <td>110.941 </td>
+        </tr>
+        <tr>
+            <td>分离债</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0 </td>
+        </tr>
+        <tr>
+            <td>企业资产支持证券</td>
+            <td>80</td>
+            <td>332761.71</td>
+            <td>91.705 </td>
+        </tr>
+        <tr>
+            <td>信贷资产支持证券</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0 </td>
+        </tr>
+        <tr>
+            <td>质押式回购</td>
+            <td>607695</td>
+            <td>137250010</td>
+            <td>2.257 </td>
+        </tr>
+        <tr>
+            <td>报价回购</td>
+            <td>247090</td>
+            <td>2725821</td>
+            <td>2.75 </td>
+        </tr>
+        <tr>
+            <td>协议回购</td>
+            <td>764</td>
+            <td>750252.6</td>
+            <td>6.145 </td>
+        </tr>
+        <tr>
+            <td>其他债券</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0 </td>
+        </tr>
+        <tr>
+            <td>合计</td>
+            <td>3391290</td>
+            <td>147504509.9</td>
+            <td>98.305 </td>
+        </tr>
+    </table>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">资讯</a>
+                </li>
+                <li>
+                    <a href="#">投资建议</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" value="请输入关键字">
+        </div>
+        <div class="user">
+            <img src="images/user.png" alt=""> Administator
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home fa-2x">
+                        </i> Dashborad
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-smile-o fa-2x">
+                        </i> 历史数据 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-list fa-2x">
+                    </i> 数据可视化
+                    </a>
+                </li>
+                <li>
+                    <a href="predict.html">
+                        <i class="fa fa-table fa-2x">
+                    </i> 商业预测 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope fa-2x">
+                    </i> 参考网址 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-folder-open-o fa-2x">
+                    </i> 市场概况 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x">
+                    </i> 债券公告 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-camera-retro fa-2x">
+                    </i> 指数走势 </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-check-square fa-2x">
+                    </i> 收益率曲线 </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>债券数据分析系统</h2>
+            <div class="latest-info">
+                <h2>
+                    每日概况
+                </h2>
+                <div class="profit-info">
+                    <p>
+                        Increaser Profit By
+                    </p>
+                    <h1>
+                        30%
+                    </h1>
+                    <i class="fa fa-tablet"></i>
+                    <h4>
+                        <a href="javascript:void(0)" onclick="document.getElementById('day').style.display='block';
+                        document.getElementById('fade').style.display='block';">查看详情</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="latest-info">
+                <h2>
+                    每周概况
+                </h2>
+                <div class="profit-info">
+                    <p>
+                        Increaser Profit By
+                    </p>
+                    <h1>
+                        38%
+                    </h1>
+                    <i class="fa fa-medkit"></i>
+                    <h4>
+                        <a href="javascript:void(0)" onclick="document.getElementById('day').style.display='block';
+                        document.getElementById('fade').style.display='block'">查看详情</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="latest-info">
+                <h2>
+                    月度概况
+                </h2>
+                <div class="profit-info">
+                    <p>
+                        Increaser Profit By
+                    </p>
+                    <h1>
+                        24%
+                    </h1>
+                    <i class="fa fa-volume-up"></i>
+                    <h4>
+                        <a href="javascript:void(0)" onclick="document.getElementById('day').style.display='block';
+                        document.getElementById('fade').style.display='block'">查看详情</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="latest-info">
+                <h2>
+                    季度概况
+                </h2>
+                <div class="profit-info">
+                    <p>
+                        Increaser Profit By
+                    </p>
+                    <h1>
+                        34%
+                    </h1>
+                    <i class="fa fa-comment-o"></i>
+                    <h4>
+                        <a href="javascript:void(0)" onclick="document.getElementById('day').style.display='block';
+                        document.getElementById('fade').style.display='block'">查看详情</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const click = document.querySelectorAll('body > div.main-content > div.content > div.latest-info > div.profit-info > h4 > a');
+    const ul = document.querySelectorAll('body > div.main-content > div.left-menu > ul')[0];
+    let logo = document.getElementsByClassName('logo')[0];
+    let doc = document.documentElement;
+    let init_height = doc.scrollHeight;
+    for (let i = 0; i < click.length; i++) {
+        click[i].onclick = function() {
+            logo_height = logo.offsetHeight;
+            document.getElementById('day').style.display = 'block';
+            document.body.style.height = doc.scrollHeight + 'px';
+            ul.style.height = doc.scrollHeight - logo_height + 'px';
+            document.getElementById('fade').style.display = 'block';
+        }
+    }
+
+    const close = document.getElementsByClassName("fa fa-times");
+    for (let i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            logo_height = logo.offsetHeight;
+            document.getElementById('day').style.display = 'none';
+            document.body.style.height = init_height + 'px';
+            ul.style.height = init_height - logo_height + 'px';
+            document.getElementById('fade').style.display = 'none';
+        }
+    }
+</script>
+
+</html>
