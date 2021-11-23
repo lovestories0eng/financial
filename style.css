@@ -263,34 +263,6 @@ table caption a {
     filter: alpha(opacity=88);
 }
 
-.white-content {
-    display: none;
-    position: absolute;
-    top: 200px;
-    left: 35%;
-    width: 570px;
-    height: 840px;
-    padding: 0px 20px;
-    border: 10px solid rgb(34, 15, 10);
-    background-color: #fff;
-    z-index: 1002;
-    /* overflow: auto; */
-}
-
-.black_overlay {
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=88);
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -334,4 +306,90 @@ th {
 
 .pure-table td {
     background-color: transparent;
+}
+
+#general-picture {
+    position: relative;
+    display: inline-block;
+    left: 184px;
+}
+
+#general-picture .table-head {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#general-picture h3 {
+    display: inline-block;
+}
+
+#general-picture input {
+    width: 50px;
+}
+
+#general-picture table {
+    margin: 5px 20px;
+}
+
+#ssebond-day {
+    position: relative;
+    display: inline-block;
+    left: 184px;
+}
+
+#ssebond-day .table-head {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#ssebond-day h3 {
+    display: inline-block;
+}
+
+#ssebond-day input {
+    width: 50px;
+}
+
+#ssebond-day table {
+    margin: 5px 20px;
+}
+
+#ssedeal-day {
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+    left: 184px;
+}
+
+#ssedeal-day .table-head {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#ssedeal-day h3 {
+    display: inline-block;
+}
+
+#ssedeal-day input {
+    width: 50px;
+}
+
+#ssedeal-day table {
+    margin: 5px 20px;
+}
+
+#moiton-index {
+    display: inline-block;
+    /* position: relative;
+    left: 100px; */
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 800px;
+    height: 500px;
 }
