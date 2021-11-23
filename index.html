@@ -9,128 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="form-style.css"> -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
     <script src="JS/echarts.js"></script>
     <title>金融数据分析系统</title>
 </head>
 
 <body>
     <div id="fade" class="black_overlay"></div>
-    <table class="pure-table white-content" id="day">
-        <caption>
-            <a href="javascript:void(0)"><i class="fa fa-times"></i></a>
-        </caption>
-        <caption>
-            <h2>每日概况</h2>
-        </caption>
-        <thead>
-            <td>类型</td>
-            <td>成交笔数</td>
-            <td>成交金额(万元)</td>
-            <td>加权平均价格 </td>
-        </thead>
-        <tr>
-            <td>记账式国债</td>
-            <td>2278</td>
-            <td>172636.91</td>
-            <td>102.632 </td>
-        </tr>
-        <tr>
-            <td>地方政府债</td>
-            <td>1</td>
-            <td>3080.76</td>
-            <td>102.692 </td>
-        </tr>
-        <tr>
-            <td>金融债</td>
-            <td>193</td>
-            <td>4947.89</td>
-            <td>106.307 </td>
-        </tr>
-        <tr>
-            <td>企业债</td>
-            <td>341</td>
-            <td>295100.79</td>
-            <td>77.112 </td>
-        </tr>
-        <tr>
-            <td>中小企业私募债</td>
-            <td>871</td>
-            <td>2224091.3</td>
-            <td>99.181 </td>
-        </tr>
-        <tr>
-            <td>公开发行公司债</td>
-            <td>1540</td>
-            <td>1365742.24</td>
-            <td>96.784 </td>
-        </tr>
-        <tr>
-            <td>非公开发行公司债</td>
-            <td>7</td>
-            <td>13000</td>
-            <td>100 </td>
-        </tr>
-        <tr>
-            <td>可转债</td>
-            <td>2528169</td>
-            <td>2329881.36</td>
-            <td>138.179 </td>
-        </tr>
-        <tr>
-            <td>可交换债</td>
-            <td>2261</td>
-            <td>37183.3</td>
-            <td>110.941 </td>
-        </tr>
-        <tr>
-            <td>分离债</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0 </td>
-        </tr>
-        <tr>
-            <td>企业资产支持证券</td>
-            <td>80</td>
-            <td>332761.71</td>
-            <td>91.705 </td>
-        </tr>
-        <tr>
-            <td>信贷资产支持证券</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0 </td>
-        </tr>
-        <tr>
-            <td>质押式回购</td>
-            <td>607695</td>
-            <td>137250010</td>
-            <td>2.257 </td>
-        </tr>
-        <tr>
-            <td>报价回购</td>
-            <td>247090</td>
-            <td>2725821</td>
-            <td>2.75 </td>
-        </tr>
-        <tr>
-            <td>协议回购</td>
-            <td>764</td>
-            <td>750252.6</td>
-            <td>6.145 </td>
-        </tr>
-        <tr>
-            <td>其他债券</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0 </td>
-        </tr>
-        <tr>
-            <td>合计</td>
-            <td>3391290</td>
-            <td>147504509.9</td>
-            <td>98.305 </td>
-        </tr>
-    </table>
+    <div class="pure-table white-content" id="bond-day">
+
+    </div>
     <div class="navbar">
         <div class="logo">
             <img src="images/logo.png" alt="">
@@ -144,7 +32,7 @@
                     <a href="#">资讯</a>
                 </li>
                 <li>
-                    <a href="#">投资建议</a>
+                    <a href="https://www.pshtrophycloud.com" target="_blank">我的博客</a>
                 </li>
             </ul>
         </div>
@@ -179,7 +67,7 @@
                 <li>
                     <a href="predict.html">
                         <i class="fa fa-table fa-2x">
-                    </i> 商业预测 </a>
+                    </i> 金融知识 </a>
                 </li>
                 <li>
                     <a href="#">
@@ -209,88 +97,62 @@
             </ul>
         </div>
         <div class="content">
-            <h2>债券数据分析系统</h2>
-            <div class="latest-info">
-                <h2>
-                    每日概况
-                </h2>
-                <div class="profit-info">
-                    <p>
-                        Increaser Profit By
-                    </p>
-                    <h1>
-                        30%
-                    </h1>
-                    <i class="fa fa-tablet"></i>
-                    <h4>
-                        <a href="javascript:void(0)">查看详情</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="latest-info">
-                <h2>
-                    每周概况
-                </h2>
-                <div class="profit-info">
-                    <p>
-                        Increaser Profit By
-                    </p>
-                    <h1>
-                        38%
-                    </h1>
-                    <i class="fa fa-medkit"></i>
-                    <h4>
-                        <a href="javascript:void(0)">查看详情</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="latest-info">
-                <h2>
-                    月度概况
-                </h2>
-                <div class="profit-info">
-                    <p>
-                        Increaser Profit By
-                    </p>
-                    <h1>
-                        24%
-                    </h1>
-                    <i class="fa fa-volume-up"></i>
-                    <h4>
-                        <a href="javascript:void(0)">查看详情</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="latest-info">
-                <h2>
-                    季度概况
-                </h2>
-                <div class="profit-info">
-                    <p>
-                        Increaser Profit By
-                    </p>
-                    <h1>
-                        34%
-                    </h1>
-                    <i class="fa fa-comment-o"></i>
-                    <h4>
-                        <a href="javascript:void(0)">查看详情</a>
-                    </h4>
-                </div>
-            </div>
+            <h2>金融数据分析系统</h2>
         </div>
         <div id="situation"></div>
         <div id="k-line"></div>
-        <div id="hist"></div>
+
+        <div class="pure-table" id="general-picture">
+            <div class="table head">
+                <h3>
+                    市场总貌
+                </h3>
+                <br>
+                <input type="text" placeholder="年" id="general-picture-input-year">
+                <input type="text" placeholder="月" id="general-picture-input-month">
+                <input type="text" placeholder="日" id="general-picture-input-day">
+                <button id="general-picture-button">查询</button>
+            </div>
+            <table></table>
+        </div>
+
+        <div class="pure-table" id="ssebond-day">
+            <div class="table-head">
+                <h3>
+                    深圳证券交易所-市场总貌
+                </h3>
+                <br>
+                <input type="text" placeholder="年" id="ssebond-day-input-year">
+                <input type="text" placeholder="月" id="ssebond-day-input-month">
+                <input type="text" placeholder="日" id="ssebond-day-input-day">
+                <button id="ssebond-day-button">查询</button>
+            </div>
+            <table></table>
+        </div>
+
+        <div class="pure-table" id="ssedeal-day">
+            <div class="table-head">
+                <h3>
+                    上海证券交易所-每日概况
+                </h3>
+                <br>
+                <input type="text" placeholder="年" id="ssedeal-day-input-year">
+                <input type="text" placeholder="月" id="ssedeal-day-input-month">
+                <input type="text" placeholder="日" id="ssedeal-day-input-day">
+                <button id="ssedeal-day-button">查询</button>
+            </div>
+            <table></table>
+        </div>
+        <div id="motion-index">
+
+        </div>
+
     </div>
 
     <script src="JS/info.js">
     </script>
 
     <script type="text/javascript" src="JS/k-line.js">
-    </script>
-
-    <script src="JS/hist.js">
     </script>
 
 </body>
@@ -304,7 +166,7 @@
     for (let i = 0; i < click.length; i++) {
         click[i].onclick = function() {
             logo_height = logo.offsetHeight;
-            document.getElementById('day').style.display = 'block';
+            document.getElementById('bond-day').style.display = 'block';
             document.body.style.height = doc.scrollHeight + 'px';
             ul.style.height = doc.scrollHeight - logo_height + 'px';
             document.getElementById('fade').style.display = 'block';
@@ -315,12 +177,79 @@
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function() {
             logo_height = logo.offsetHeight;
-            document.getElementById('day').style.display = 'none';
+            document.getElementById('bond-day').style.display = 'none';
             document.body.style.height = init_height + 'px';
             ul.style.height = init_height - logo_height + 'px';
             document.getElementById('fade').style.display = 'none';
         }
     }
+</script>
+
+<script src="JS/common.js"></script>
+
+<script>
+    // 深圳证券交易所-市场总貌模块
+    ssebond_day_btn = document.getElementById("ssebond-day-button");
+    // 上海证券交易所-每日概况
+    ssedeal_day_btn = document.getElementById("ssedeal-day-button");
+    // 市场总貌
+    general_picture_btn = document.getElementById("general-picture-button");
+
+    ssebond_day_btn.onclick = function() {
+        let ssebond_day_input_year = document.getElementById("ssebond-day-input-year");
+        let ssebond_day_input_month = document.getElementById("ssebond-day-input-month");
+        let ssebond_day_input_day = document.getElementById("ssebond-day-input-day");
+        let year = ssebond_day_input_year.value.toString();
+        let month = ssebond_day_input_month.value.toString();
+        let day = ssebond_day_input_day.value.toString();
+        let btndate = year + month + day;
+        request_sse_bond_day_data(btndate);
+    }
+
+    ssedeal_day_btn.onclick = function() {
+        let ssedeal_day_input_year = document.getElementById("ssedeal-day-input-year");
+        let ssedeal_day_input_month = document.getElementById("ssedeal-day-input-month");
+        let ssedeal_day_input_day = document.getElementById("ssedeal-day-input-day");
+        let year = ssedeal_day_input_year.value.toString();
+        let month = ssedeal_day_input_month.value.toString();
+        let day = ssedeal_day_input_day.value.toString();
+        let btndate = year + month + day;
+        request_sse_deal_day_data(btndate);
+    }
+
+    general_picture_btn.onclick = function() {
+        let general_picture_input_year = document.getElementById("general-picture-input-year");
+        let general_picture_input_month = document.getElementById("general-picture-input-month");
+        let general_picture_input_day = document.getElementById("general-picture-input-day");
+        let year = general_picture_input_year.value.toString();
+        let month = general_picture_input_month.value.toString();
+        let day = general_picture_input_day.value.toString();
+        let btndate = year + month + day;
+        request_general_picture_data(btndate);
+    }
+
+    window.onload = function() {
+        var date = new Date();
+        // 获取前一天时间
+        date.setTime(date.getTime() - (24 * 60 * 60 * 1000) * 4)
+        var year = (date.getFullYear()).toString();
+        var month = (date.getMonth() + 1).toString();
+        var day = (date.getDate()).toString();
+        if (month.length === 1)
+            month = '0' + month;
+        if (day.length === 1)
+            day = '0' + day;
+        var strdate = year + month + day;
+        console.log(strdate);
+        request_sse_bond_day_data(strdate);
+        request_sse_deal_day_data(strdate);
+        request_general_picture_data(strdate);
+        request_sse_index();
+        request_motion_index('上证综指');
+    }
+</script>
+
+<script>
 </script>
 
 </html>
